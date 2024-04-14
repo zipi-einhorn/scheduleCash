@@ -1,0 +1,217 @@
+{
+        "summary": {
+            "available_carriers": [
+                {
+                    "carrier": {
+                        "id": 14,
+                        "name": "Zim",
+                        "scac": "ZIMU"
+                    },
+                    "count": 1,
+                    "max_duration": 12,
+                    "min_duration": 12,
+                    "min_duration_ts_count": 0
+                }
+            ],
+            "available_destination_ports": [
+                {
+                    "count": 1,
+                    "port": {
+                        "code": "BRIOA",
+                        "country": {
+                            "id": "BR",
+                            "name": "Brazil"
+                        },
+                        "id": 5058,
+                        "latlong": [
+                            -33.85,
+                            151.2
+                        ],
+                        "name": "Itapoa",
+                        "region": {
+                            "country_id": "BR",
+                            "id": 78,
+                            "name": "Santa Catarina"
+                        }
+                    }
+                }
+            ],
+            "available_origin_ports": [
+                {
+                    "count": 1,
+                    "port": {
+                        "code": "ARBUE",
+                        "country": {
+                            "id": "AR",
+                            "name": "Argentina"
+                        },
+                        "id": 247,
+                        "latlong": [
+                            -33.85,
+                            151.2
+                        ],
+                        "name": "Buenos Aires",
+                        "region": {
+                            "country_id": "AR",
+                            "id": 3,
+                            "name": "Distrito Federal"
+                        }
+                    }
+                }
+            ],
+            "available_transhipments": [
+                1
+            ],
+            "count": 1,
+            "max_duration": 12,
+            "min_duration": 11,
+            "selected_carriers": [
+                14
+            ],
+            "excluded_carriers": [],
+            "selected_duration.gte": 12,
+            "selected_duration.lte": 12,
+            "selected_transhipments": [
+                1
+            ]
+        },
+        "items": [
+            {
+                "carrier": {
+                    "id": 14,
+                    "name": "Zim",
+                    "scac": "ZIMU"
+                },
+                "duration": 12,
+                "legs": [
+                    {
+                        "distance": {
+                            "miles": 429
+                        },
+                        "end": {
+                            "date": "2016-05-25",
+                            "port": {
+                                "code": "BRRIG",
+                                "country": {
+                                    "id": "BR",
+                                    "name": "Brazil"
+                                },
+                                "id": 5686,
+                                "latlong": [
+                                    -33.85,
+                                    151.2
+                                ],
+                                "name": "Rio Grande",
+                                "region": {
+                                    "country_id": "BR",
+                                    "id": 77,
+                                    "name": "Rio Grande do Sul"
+                                },
+                                "terminals": [
+                                    {"name": "TECON Container Terminal", "code": "TECRG"}
+                                ]
+                            }
+                        },
+                        "route": {
+                            "code": "GSA",
+                            "id": 14591,
+                            "name": "GULF SOUTH AMERICA SERVICE"
+                        },
+                        "schedule_id": 18289925,
+                        "start": {
+                            "date": "2016-05-21",
+                            "port": {
+                                "code": "ARBUE",
+                                "country": {
+                                    "id": "AR",
+                                    "name": "Argentina"
+                                },
+                                "id": 247,
+                                "latlong": [
+                                    -33.85,
+                                    151.2
+                                ],
+                                "name": "Buenos Aires",
+                                "region": {
+                                    "country_id": "AR",
+                                    "id": 3,
+                                    "name": "Distrito Federal"
+                                },
+                                "terminals": [
+                                    {"name": "Exolgan Container Terminal", "code": "EXOL"}
+                                ]
+                            }
+                        },
+                        "vessel": {
+                            "id": 3949,
+                            "imo": "9231262",
+                            "name": "E.R. SWEDEN"
+                        },
+                        "voyage": "8"
+                    },
+                    {
+                        "end": {
+                            "date": "2016-06-02",
+                            "port": {
+                                "code": "BRIOA",
+                                "country": {
+                                    "id": "BR",
+                                    "name": "Brazil"
+                                },
+                                "id": 5058,
+                                "latlong": [
+                                    -33.85,
+                                    151.2
+                                ],
+                                "name": "Itapoa",
+                                "region": {
+                                    "country_id": "BR",
+                                    "id": 78,
+                                    "name": "Santa Catarina"
+                                },
+                                "terminals": [
+                                    {"name": "Itapoa Container Terminal", "code": "ITP"}
+                                ]
+                            }
+                        },
+                        "route": {
+                            "code": "SAM",
+                            "id": 1729,
+                            "name": "SOUTH AMERICA MEDITERRANEAN SERVICE"
+                        },
+                        "schedule_id": 18290644,
+                        "start": {
+                            "date": "2016-05-29",
+                            "port": {
+                                "code": "BRRIG",
+                                "country": {
+                                    "id": "BR",
+                                    "name": "Brazil"
+                                },
+                                "id": 5686,
+                                "latlong": [
+                                    -33.85,
+                                    151.2
+                                ],
+                                "name": "Rio Grande",
+                                "region": {
+                                    "country_id": "BR",
+                                    "id": 77,
+                                    "name": "Rio Grande do Sul"
+                                },
+                                "terminals": [
+                                    {"name": "TECON Container Terminal", "code": "TECRG"}
+                                ]
+                            }
+                        },
+                        "vessel": {
+                            "id": 8356,
+                            "imo": "9480203",
+                            "name": "MSC CADIZ"
+                        },
+                        "voyage": "24"
+                    }
+                ]
+            }
+        ]
+    }
