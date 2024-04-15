@@ -46,7 +46,7 @@ def schedule_cache():
     page_size = request.args.get('page_size')
 
     # Validate parameters
-    if carrier_id is None or page is None:
+    if carrier_id is None or page is None or page_size is None:
         return jsonify({'error': 'Missing parameters: carrier_id are required.'}), 400
 
     # Convert page to integer
@@ -54,6 +54,12 @@ def schedule_cache():
         page = int(page)
     except ValueError:
         return jsonify({'error': 'Invalid page value. Page must be an integer.'}), 400
+
+    # Convert page to integer
+    try:
+        page_size = int(page_size)
+    except ValueError:
+        return jsonify({'error': 'Invalid page value. Page size must be an integer.'}), 400
 
     # Run extraction process
     try:

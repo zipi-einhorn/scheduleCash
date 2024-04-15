@@ -68,14 +68,28 @@ def load_to_csv_exist(carrier_id, data):
                 # Check if ID exists in existing data
                 if leg_id in existing_data['id'].values:
                     # Update the existing record
-                    existing_data.loc[existing_data['id'] == leg_id, 'carrier'] = str(schedule.carrier_id)
-                    existing_data.loc[existing_data['id'] == leg_id, 'origin'] = str(leg.origin)
-                    existing_data.loc[existing_data['id'] == leg_id, 'destination'] = str(leg.destination)
-                    existing_data.loc[existing_data['id'] == leg_id, 'departureDateTime'] = str(leg.departure_date)
-                    existing_data.loc[existing_data['id'] == leg_id, 'arrivalDateTime'] = str(leg.arrival_date)
-                    existing_data.loc[existing_data['id'] == leg_id, 'duration'] = str(leg.duration.days)
-                    existing_data.loc[existing_data['id'] == leg_id, 'lastModifiedTime'] = str(
-                        datetime.now().isoformat())
+                    index = existing_data.loc[existing_data['id'] == leg_id].index[0]
+                    updated = False  # Flag to check if any change has been made
+                    if existing_data.at[index, 'carrier'] != str(schedule.carrier_id):
+                        existing_data.at[index, 'carrier'] = str(schedule.carrier_id)
+                        updated = True
+                    if existing_data.at[index, 'origin'] != str(leg.origin):
+                        existing_data.at[index, 'origin'] = str(leg.origin)
+                        updated = True
+                    if existing_data.at[index, 'destination'] != str(leg.destination):
+                        existing_data.at[index, 'destination'] = str(leg.destination)
+                        updated = True
+                    if existing_data.at[index, 'departureDateTime'] != str(leg.departure_date):
+                        existing_data.at[index, 'departureDateTime'] = str(leg.departure_date)
+                        updated = True
+                    if existing_data.at[index, 'arrivalDateTime'] != str(leg.arrival_date):
+                        existing_data.at[index, 'arrivalDateTime'] = str(leg.arrival_date)
+                        updated = True
+                    if existing_data.at[index, 'duration'] != str(leg.duration.days):
+                        existing_data.at[index, 'duration'] = str(leg.duration.days)
+                        updated = True
+                    if updated:
+                        existing_data.at[index, 'lastModifiedTime'] = str(datetime.now().isoformat())
                 else:
                     # Add new record
                     new_row = {
